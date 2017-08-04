@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Newer</string>
+    <string name="label">Product</string>
+    <string name="switchLabel">Toggle Rotate</string>
+    <string name="displayLine">Line</string>
+    <string name="metric">cm</string>
+    <string name="imperial">inch</string>
+</resources>

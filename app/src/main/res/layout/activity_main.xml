@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.vishalbisht.newer.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/inch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/imperial" />
+
+        <Button
+            android:id="@+id/cm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/metric" />
+
+        <Button
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/displayLine" />
+
+        <Switch
+            android:id="@+id/modeSwitch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/switchLabel" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <RelativeLayout
+            android:id="@+id/fixedJewelFrame"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp">
+            <!--android:background="#bef1eb">-->
+
+            <FrameLayout
+                android:id="@+id/jewelFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/jewel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/jewelHeight"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@+id/jewelFrame"
+                android:layout_toStartOf="@+id/jewelFrame"
+                android:background="#000"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/jewelWidth"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/jewelFrame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="#000"
+                android:paddingLeft="4dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/jewelHeightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/jewelFrame"
+                android:background="#fff"
+                android:rotation="270"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/jewelWidthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jewelFrame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="#fff"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fixedItemFrame"
+            android:layout_width="160dp"
+            android:layout_height="200dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/fixedJewelFrame"
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp">
+            <!--android:background="#bef1eb">-->
+
+            <FrameLayout
+                android:id="@+id/itemFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/itemHeight"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@+id/itemFrame"
+                android:layout_toStartOf="@+id/itemFrame"
+                android:background="#000"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/itemWidth"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/itemFrame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="#000"
+                android:paddingLeft="4dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/itemHeightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/itemFrame"
+                android:layout_toStartOf="@+id/itemFrame"
+                android:background="#fff"
+                android:rotation="270"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/itemWidthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/itemFrame"
+                android:layout_centerHorizontal="true"
+                android:background="#fff"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label"
+        android:textAllCaps="true"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.57">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>
